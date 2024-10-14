@@ -1,0 +1,44 @@
+{% extends "import.html" %} 
+{% block content %}
+
+<center>
+    <style>
+        html body {
+          background-color: rgb(206, 206, 228);
+        }
+      </style>
+<br><h2>Find out which disease has been caught by your plant</h2><br>
+
+<div style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+    font-weight: bold;
+  ">
+
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+         <input type="file" name="file" class="btn btn-success" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+
+    <div class="image-section" style="display:none;">
+         <img id="imagePreview"  class="img-responsive" src="#" style="width:300px;height:300px;"/><br><br>
+         <div>
+            <button type="button" class="btn btn-info btn-lg " id="btn-predict">Predict!</button>
+         </div>
+    </div>
+
+
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 id="result">
+        <span> </span>
+    </h3>
+
+
+</center><br><br>
+{% endblock %}
